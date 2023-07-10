@@ -497,17 +497,18 @@ Além disso, é necessário considerar que a classe `Login` também possui méto
       - Cadastrar cortes com tipo, preço e duração.
       ![Cadastro Cortes](img/RegistroCorte.jpg).
 
-      ![Consultar Agendamento](img/Relatorios.jpg).
+    ![Consultar Agendamento](img/Relatorios.jpg)
+
       - Consultar agendamentos por data e exibir em uma tabela.
       - Consultar a contabilidade por data ou dia atual e exibir em uma caixa de diálogo.
       - Exibir os tipos de cortes cadastrados em uma tabela.
       - Acesso a informações sobre a barbearia e o software utilizado.
 
-  - Demonstração da interface:
+  - Demonstração da interface (Telas Barbearia):
 
     ![Telas Barbearia Interface](img/TelaAgendar.jpg)
     ![Telas Barbearia Interface](img/TelaInfo.jpg)
-    ![Telas Barbearia Interface](img/TelaInfo.jpg.jpg)
+    ![Telas Barbearia Interface](img/TelaBarbeiro.jpg)
 
 ## Resultados e Conclusões:
 
