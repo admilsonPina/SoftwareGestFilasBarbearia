@@ -388,3 +388,147 @@ Complexidade do algoritmo:
 - A exibição da fila de atendimento possui complexidade O(m), onde m é o tamanho da fila do barbeiro selecionado.
 - As demais operações, como agendar cliente, atualizar tamanho da fila, obter último agendamento, entre outras, têm complexidade O(1).
 
+## Interface
+
+
+
+### Login
+
+A classe `Login` é responsável por criar a tela de login de um sistema de barbearia. Ela possui diversos componentes gráficos, como labels, text fields, buttons, menus, entre outros, que permitem ao usuário interagir com o sistema.
+
+O funcionamento da classe é dividido em dois principais aspectos: a autenticação do usuário e a navegação nas funcionalidades do sistema.
+
+### Autenticação do usuário
+
+Ao clicar no botão de login (`btnLogin`), a classe captura o nome de usuário e a senha inseridos nos campos correspondentes (`txtNome` e `PassWSenha`, respectivamente). Em seguida, verifica se os campos estão vazios e exibe uma mensagem de erro caso necessário.
+
+Caso os campos não estejam vazios, a classe chama o método `autenticarSistema` da classe `BaseDeDados` para verificar se as credenciais do usuário são válidas. Se as credenciais estiverem corretas, o usuário é redirecionado para a tela principal do sistema (`TelasBarbearia`).
+
+### Navegação nas funcionalidades
+
+A classe possui diversos eventos associados a botões e itens de menu que permitem a navegação nas diferentes funcionalidades do sistema. Por exemplo:
+
+- Ao clicar no item de menu "Cortes" (`MenuItemCortes`), é aberta uma nova janela onde o usuário pode registrar os dados de um novo corte.
+
+- Ao clicar no item de menu "Barbeiro" (`MenuItemBarbeiro`), é aberta uma nova janela onde o usuário pode cadastrar um novo barbeiro.
+
+- Ao clicar no item de menu "Agendamento" (`MenuItemAgendamento`), é exibida uma caixa de diálogo onde o usuário pode escolher entre consultar os agendamentos do dia ou em uma data específica.
+
+- Ao clicar no item de menu "Contabilidade" (`MenuItemContabilidade`), é exibida uma caixa de diálogo onde o usuário pode escolher entre consultar a contabilidade do dia ou em uma data específica.
+
+- Ao clicar no item de menu "Tipos de Cortes" (`MenuItemtiposDeCorte`), é exibida uma tabela com os tipos de cortes registrados no sistema.
+
+Outras funcionalidades, como exibir informações sobre a barbearia e o software, também estão disponíveis por meio dos itens de menu correspondentes.
+
+## Descrição dos Algoritmos e Uso dos Objetos Java
+
+A classe `Login` faz uso de diversos objetos do Java para criar a interface gráfica e implementar as funcionalidades do sistema. Abaixo, estão descritos alguns dos objetos utilizados:
+
+- `JFrame`: É uma classe que representa uma janela na interface gráfica. A classe `Login` herda de `JFrame` para criar a janela de login.
+
+- `JLabel`: É uma classe que exibe um texto ou uma imagem na interface gráfica. É utilizada para exibir labels como "Login", "Password", etc.
+
+- `JTextField`, `JPasswordField`: São classes que permitem ao usuário inserir texto na interface gráfica. São utilizadas para capturar o nome de usuário e senha.
+
+- `JButton`: É uma classe que representa um botão na interface gráfica. É utilizada para criar botões como "Login", "Salvar", etc.
+
+- `JMenuBar`, `JMenu`, `JMenuItem`: São classes que permitem criar barras de menu com itens clicáveis. São utilizadas para criar o menu da aplicação e as opções disponíveis.
+
+- `JPanel`: É uma classe que representa um painel na interface gráfica. É utilizada para agrupar componentes e organizar a interface.
+
+- `JOptionPane`: É uma classe que exibe caixas de diálogo na interface gráfica. É utilizada para exibir mensagens de erro, solicitar dados do usuário, entre outros.
+
+- `BaseDeDados`: É uma classe que representa a base de dados do sistema. É utilizada para autenticar o usuário, cadastrar barbeiros, registrar cortes, consultar agendamentos, entre outras operações.
+
+- Outros objetos como `ImageIcon`, `Font`, `Cursor`, `BufferedImage`, `CircularPanel`, `JScrollPane`, `JTable`, etc., são utilizados para personalizar a interface gráfica e fornecer funcionalidades específicas.
+
+## Análise da Complexidade dos Principais Algoritmos
+
+A complexidade dos algoritmos na classe `Login` depende principalmente das operações realizadas em cada evento. Abaixo, são descritos os principais algoritmos e sua complexidade aproximada:
+
+- Autenticação do usuário (`actionPerformed` com `btnLogin`):
+  - A complexidade é O(1), pois envolve apenas operações de verificação e chamadas de método na classe `BaseDeDados`.
+
+- Registro de cortes (`actionPerformed` com `MenuItemCortes`):
+  - A complexidade é O(1), pois envolve apenas a exibição de uma nova janela e o registro dos dados do corte na classe `BaseDeDados`.
+
+- Cadastro de barbeiro (`actionPerformed` com `MenuItemBarbeiro`):
+  - A complexidade é O(1), pois envolve apenas a exibição de uma nova janela e o cadastro dos dados do barbeiro na classe `BaseDeDados`.
+
+- Consulta de agendamentos (`actionPerformed` com `MenuItemAgendamento`):
+  - A complexidade depende da opção selecionada pelo usuário:
+    - Agendamentos do dia: A complexidade é O(n), onde n é o número de agendamentos do dia. Isso ocorre porque é necessário consultar os agendamentos por data na classe `BaseDeDados` e exibir os resultados em uma caixa de diálogo.
+    - Agendamentos em data específica: A complexidade é O(n), onde n é o número de agendamentos na data especificada. Isso ocorre porque é necessário consultar os agendamentos por data na classe `BaseDeDados` e exibir os resultados em uma caixa de diálogo.
+
+- Consulta de contabilidade (`actionPerformed` com `MenuItemContabilidade`):
+  - A complexidade depende da opção selecionada pelo usuário:
+    - Contabilidade do dia: A complexidade é O(n), onde n é o número de agendamentos finalizados no dia. Isso ocorre porque é necessário consultar os agendamentos finalizados por barbeiro na classe `BaseDeDados` e exibir os resultados em uma caixa de diálogo.
+    - Contabilidade em data específica: A complexidade é O(n), onde n é o número de agendamentos finalizados na data especificada. Isso ocorre porque é necessário consultar os agendamentos finalizados por barbeiro na classe `BaseDeDados` e exibir os resultados em uma caixa de diálogo.
+
+- Exibição de tipos de cortes (`actionPerformed` com `MenuItemtiposDeCorte`):
+  - A complexidade é O(m), onde m é o número de tipos de cortes registrados na base de dados. Isso ocorre porque é necessário consultar os tipos de cortes na classe `BaseDeDados` e exibir os resultados em uma tabela.
+
+É importante ressaltar que a complexidade descrita acima é uma estimativa aproximada e pode variar dependendo da implementação detalhada de cada método na classe `BaseDeDados` e de outras classes auxiliares utilizadas.
+
+Além disso, é necessário considerar que a classe `Login` também possui métodos auxiliares, como `autenticarUser`, `Barbero`, `Corte`, `exibirAgendamentos` e `exibirRelatorioContabilidade`, que não foram analisados individualmente, mas contribuem para o funcionamento do sistema.
+
+
+## Interface (Login e Telas Barbearia):
+  
+  - Descrição da interface:
+    - A interface de Login é responsável por exibir a tela de login, onde o usuário pode inserir seu nome de usuário e senha para autenticação no sistema. Ela apresenta campos de texto para inserção dos dados e botões para realizar o login. Além disso, possui menus com opções de registro, relatório e informações sobre o sistema.
+
+    - A interface das Telas Barbearia é responsável por exibir a tela principal do sistema após o login bem-sucedido. Ela apresenta uma interface gráfica mais abrangente, com menus que permitem . 
+    Também possui campos de texto, botões e tabelas para interação com o usuário.
+
+  - Funcionalidades disponibilizadas ao utilizador:
+    - Na interface de Login:
+
+      - Inserir nome de usuário e senha para autenticação no sistema.
+      - Realizar o login através do botão de login.
+      ![Tela Login](img/telaLogin.jpg).
+
+      - Acesso a menus de registro, relatório e informações sobre o sistema.
+      ![Barra Menus](img/Relatorios.jpg).
+
+      - Cadastrar barbeiros com nome, contato, CNI, morada e especialidade.
+      ![Cadastro Barbeiro](img/RegistroBarbeiro.jpg).
+
+      - Cadastrar cortes com tipo, preço e duração.
+      ![Cadastro Cortes](img/RegistroCorte.jpg).
+
+      ![Consultar Agendamento](img/Relatorios.jpg).
+      - Consultar agendamentos por data e exibir em uma tabela.
+      - Consultar a contabilidade por data ou dia atual e exibir em uma caixa de diálogo.
+      - Exibir os tipos de cortes cadastrados em uma tabela.
+      - Acesso a informações sobre a barbearia e o software utilizado.
+
+  - Demonstração da interface:
+
+    ![Telas Barbearia Interface](img/TelaAgendar.jpg)
+    ![Telas Barbearia Interface](img/TelaInfo.jpg)
+    ![Telas Barbearia Interface](img/TelaInfo.jpg.jpg)
+
+## Resultados e Conclusões:
+
+  O software de gestão de fila de barbearia desenvolvido apresentou os seguintes resultados e conclusões:
+
+  - Organização e eficiência: O software proporcionou uma melhor organização e eficiência no gerenciamento da fila de atendimento em uma barbearia. Com as funcionalidades de cadastro de barbeiros, tipos de cortes e agendamentos, foi possível otimizar o fluxo de trabalho e garantir um atendimento mais ágil e satisfatório para os clientes.
+
+  - Controle de agendamentos: O sistema permitiu o agendamento de cortes, possibilitando aos clientes escolherem o barbeiro, o tipo de corte  desejada. Isso contribuiu para uma melhor distribuição dos serviços ao longo do dia e evitou o acúmulo de clientes em desoorganizando a fila.
+
+  - Relatórios e informações: A geração de relatórios permitiu a análise dos dados relacionados aos agendamentos, contabilidade e tipos de cortes. Essas informações foram úteis para o acompanhamento do desempenho da barbearia, a tomada de decisões estratégicas e a identificação de oportunidades de melhoria.
+
+  - Experiência do utilizador: A interface amigável e intuitiva do software proporcionou uma experiência agradável para os usuários, facilitando o uso e a navegação entre as funcionalidades. Isso contribuiu para a adoção do software pelos colaboradores da barbearia e para a satisfação dos clientes.
+
+  - Resultados positivos: A implementação do software de gestão de fila de barbearia resulta em uma maior eficiência operacional, redução de erros e melhor controle do atendimento ao cliente. Isso impacta positivamente a reputação da barbearia e a fidelização dos clientes.
+
+  Em suma, o software de gestão de fila de barbearia demonstrou ser uma solução eficaz para otimizar os processos internos, melhorar o atendimento aos clientes e proporcionar uma experiência mais satisfatória para todos os envolvidos.
+
+
+## Referências:
+  - JTattoo: <http://www.jtattoo.net/Download.html>
+  - Conector MySQL em Java: <https://dev.mysql.com/downloads/connector/j/>
+
+
+
