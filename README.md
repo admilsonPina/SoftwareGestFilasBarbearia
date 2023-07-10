@@ -229,7 +229,7 @@ Método `getIdAgendamento(Agendamento agendamento)`:
 
 ### FilaAtendimento.java
  
-- A classe `FilaAtendimento` implementa uma fila de atendimento utilizando a estrutura de dados de fila (FIFO - First In, First Out). Ela armazena objetos do tipo `Agendamento` em nós ligados, permitindo a inserção de elementos no final da fila e a remoção do elemento que está no início da fila.
+    - A classe `FilaAtendimento` implementa uma fila de atendimento utilizando a estrutura de dados de fila (FIFO - First In, First Out). Ela armazena objetos do tipo `Agendamento` em nós ligados, permitindo a inserção de elementos no final da fila e a remoção do elemento que está no início da fila.
 
 Principais métodos da classe:
 
@@ -268,11 +268,10 @@ A classe `FilaAtendimento` possui uma implementação eficiente para as operaç�
 
 ### Barbearia.java
 
-- A classe `Barbearia` representa uma barbearia no sistema de controle. Ela possui os seguintes atributos:
-
-- `filas`: Um `HashMap` que mapeia cada `Barbeiro` com sua respectiva `FilaAtendimento`. Armazena as filas de atendimento de cada barbeiro da barbearia.
-- `senhas`: Um `Map` que mapeia cada `Barbeiro` com a senha atual. Armazena as senhas dos barbeiros.
-- `agendamentosFinalizados`: Uma lista de `Agendamento` que armazena os agendamentos que foram finalizados.
+    - A classe `Barbearia` representa uma barbearia no sistema de controle. Ela possui os seguintes atributos:
+    - `filas`: Um `HashMap` que mapeia cada `Barbeiro` com sua respectiva `FilaAtendimento`. Armazena as filas de atendimento de cada barbeiro da barbearia.
+    - `senhas`: Um `Map` que mapeia cada `Barbeiro` com a senha atual. Armazena as senhas dos barbeiros.
+    - `agendamentosFinalizados`: Uma lista de `Agendamento` que armazena os agendamentos que foram finalizados.
 
 Método `agendarCliente(Cliente cliente, LocalDateTime dataHora, Cortes corte, Barbeiro barbeiro, String status, String senha)`:
   - Complexidade: O(1)
