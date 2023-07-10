@@ -1,16 +1,19 @@
-# Relatório de Gerenciamento de Fila de Atendimento de Barbearia
-
 ## Capa
 
 ![Logotipo da Universidade](img/LogoUs.png)
-Universidade Santiago
-Departamento de Ciencias da Saude, Ambiente e Tecnologias
-Engenharia Informatica
-Concepcao e Analise de Algoritmos
-Titulo do Trabalho: Gerenciamento de Fila de Atendimento de Barbearia
-Alunos: [Admilson de Pina](https://github.com/admilsonPina), [Kevin Sousa](https://github.com/Kevin199527),[Amadou Veiga](https://github.com/12q12q12q)
-Docente: Valerio Santos
-Data: [10/07/2023]
+- **Universidade Santiago**
+- **Departamento de Ciencias da Saude, Ambiente e Tecnologias**
+- **Engenharia Informatica**
+- **Concepcao e Analise de Algoritmos**
+
+- `Titulo do Trabalho`: 
+**Software Gerenciamento de Fila de Atendimento de Barbearia**
+
+- Discentes: [Admilson de Pina](https://github.com/admilsonPina), [Kevin Sousa](https://github.com/Kevin199527), [Amadou Veiga](https://github.com/12q12q12q)
+
+- Docente: Valerio Santos
+
+- Data: `10/07/2023`
 
 ## Objetivos
 
