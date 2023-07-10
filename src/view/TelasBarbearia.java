@@ -814,9 +814,12 @@ public class TelasBarbearia extends javax.swing.JFrame {
         Barbeiro barbeiroEscolhido;
 
         if (numeroBarbeiro == 0) {
-            if (barbearia.getTamanho(barbeiros.get(1)) == 0) {
+            if (barbearia.getTamanho(barbeiros.get(0)) == 0) {
                 // Sem preferência de barbeiro, mas ambos os barbeiros têm fila vazia
                 barbeiroEscolhido = barbeiros.get(0);
+            } else if (barbearia.getTamanho(barbeiros.get(1)) == 0) {
+                // Sem preferência de barbeiro, mas ambos os barbeiros têm fila vazia
+                barbeiroEscolhido = barbeiros.get(1);
             } else {
                 // Sem preferência de barbeiro, escolhe o barbeiro com o último agendamento de menor horário
                 barbeiroEscolhido = barbearia.getBarbeiroComMenorHorario();
